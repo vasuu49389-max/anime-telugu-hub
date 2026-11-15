@@ -1,115 +1,60 @@
-<!doctype html>
-<html lang="te">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Anime Telugu Hub - అనిమే సమాచారం తెలుగులో">
-  <title>Anime Telugu Hub</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="#"><span class="brand-mark">ア</span><span>ANIME <b>TELUGU HUB</b></span></a>
-    <nav><a href="#home">హోమ్</a><a href="#latest">కొత్త అనిమే</a><a href="#about">మా గురించి</a></nav>
-  </header>
-  <main id="home">
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">తెలుగు అనిమే ప్రపంచం</p>
-        <h1>మీకు ఇష్టమైన <span>Anime</span><br>ఇప్పుడు తెలుగులో!</h1>
-        <p class="hero-sub">కొత్త అనిమే వివరాలు, కథలు, పోస్టర్లు — అన్నీ ఒకేచోట.</p>
-        <a class="primary-btn" href="#latest">అనిమే చూడండి <span>→</span></a>
-      </div>
-      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-kanji">アニメ</div><div class="hero-star">✦</div></div>
-    </section>
-    <section class="catalog" id="latest">
-      <div class="section-heading"><div><p class="eyebrow">మీ తదుపరి ఇష్టమైనది</p><h2>కొత్త అనిమే</h2></div><span id="count" class="count"></span></div>
-      <div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Anime పేరు వెతకండి..." aria-label="Anime వెతకండి"></div>
-      <div id="anime-grid" class="anime-grid"></div>
-      <p id="empty" class="empty" hidden>మీ వెతుకులాటకు సరిపడే Anime కనిపించలేదు.</p>
-    </section>
-    <section class="about" id="about"><div><p class="eyebrow">ANIME • TELUGU • COMMUNITY</p><h2>Anime అభిమానుల కోసం.</h2></div><p>Anime Telugu Hub అనేది అనిమే గురించి తెలుగులో సమాచారం అందించే అభిమాని వెబ్‌సైట్. కొత్త వివరాల కోసం మళ్లీ రండి!</p></section>
-  </main>
-  <footer><span>© <span id="year"></span> Anime Telugu Hub</span><span>తెలుగు అనిమే అభిమానుల కోసం ♥</span></footer>
-  <script src="anime.js"></script>
-  <script src="app.js"></script>
-</body>
 <!DOCTYPE html>
 <html lang="te">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Telugu Hub - Naruto Special Poster</title>
-    <style>
-        body {
-            background-color: #0d0d0d;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: #ffffff;
-        }
-        .anime-poster-card {
-            max-width: 850px;
-            margin: 40px auto;
-            background: linear-gradient(145deg, #1a1a1a, #111111);
-            border: 2px solid #ff6600;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(255, 102, 0, 0.4);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .anime-poster-card:hover {
-            transform: translateY(-5px);
-        }
-        .poster-header {
-            background: #ff6600;
-            color: #000;
-            padding: 12px 20px;
-            font-weight: bold;
-            font-size: 16px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .poster-content {
-            padding: 25px;
-        }
-        .poster-title {
-            color: #ff8533;
-            font-size: 24px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .poster-desc {
-            color: #b3b3b3;
-            font-size: 15px;
-            line-height: 1.6;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .poster-footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 13px;
-            color: #888888;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Anime Telugu Hub - అనిమే సమాచారం తెలుగులో">
+<title>Anime Telugu Hub</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="topbar">
+<a class="brand" href="#"><span class="brand-mark">ア</span><span>ANIME <b>TELUGU HUB</b></span></a>
+<nav><a href="#home">హోమ్</a><a href="#latest">కొత్త అనిమే</a><a href="#about">మా గురించి</a></nav>
+</header>
+<main id="home">
+<section class="hero">
+<div class="hero-content">
+<p class="eyebrow">తెలుగు అనిమే ప్రపంచం</p>
+<h1>మీకు ఇష్టమైన <span>Anime</span>
+ఇప్పుడు తెలుగులో!</h1>
+<p class="hero-sub">కొత్త అనిమే వివరాలు, కథలు, పోస్టర్లు — అన్నీ ఒకేచోట.</p>
+<a class="primary-btn" href="#latest">అనిమే చూడండి <span>→</span></a>
+</div>
+<div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-kanji">アニメ</div><div class="hero-star">✦</div></div>
+</section>
+<section class="catalog" id="latest">
+<div class="section-heading"><div><p class="eyebrow">మీ తదుపరి ఇష్టమైనది</p><h2>కొత్త అనిమే</h2></div><span id="count" class="count"></span></div>
+<div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Anime పేరు వెతకండి..." aria-label="Anime వెతకండి"></div>
+<div id="anime-grid" class="anime-grid"></div>
+<p id="empty" class="empty" hidden>మీ వెతుకులాటకు సరిపడే Anime కనిపించలేదు.</p>
+</section>
+​<!-- Naruto Special Poster Section -->
+<section class="anime-poster-card" style="max-width: 850px; margin: 40px auto; background: linear-gradient(145deg, #1a1a1a, #111111); border: 2px solid #ff6600; border-radius: 16px; box-shadow: 0 8px 30px rgba(255, 102, 0, 0.4); overflow: hidden;">
+<div class="poster-header" style="background: #ff6600; color: #000; padding: 12px 20px; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; text-align: center;">
+Anime Telugu Hub - Naruto Special Poster
+</div>
+<div class="poster-content" style="padding: 25px;">
+<h2 class="poster-title" style="color: #ff8533; font-size: 24px; margin-bottom: 10px; text-align: center;">నారుటో స్పెషల్ పోస్టర్ & ఎపిసోడ్ వివరణ</h2>
+<p class="poster-desc" style="color: #b3b3b3; font-size: 15px; line-height: 1.6; text-align: center; margin-bottom: 20px;">
+నారుటో షిప్పుడెన్ ఎపిసోడ్ 1 హోమ్‌కమింగ్ పూర్తి వివరణ తెలుగులో మరియు ప్రత్యేక నారుటో పోస్టర్.
+</p>
+​<!-- Poster Image Display -->
+<div style="text-align: center; margin-bottom: 20px;">
+<img src="image_generation_content/35504.jpg" alt="Naruto Poster" style="max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #ff6600;" />
+</div>
+​<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.8);">
+<iframe src="[https://www.youtube.com/embed/YfiQk-WyYjU](https://www.youtube.com/embed/YfiQk-WyYjU)" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+</div>
+<div class="poster-footer" style="margin-top: 20px; text-align: center; font-size: 13px; color: #888888; font-style: italic;">
+తెలుగు అనిమే అభిమానుల కోసం ప్రత్యేకంగా రూపొందించబడింది.
+</div>
+</div>
+</section>
+​<section class="about" id="about"><div><p class="eyebrow">ANIME • TELUGU • COMMUNITY</p><h2>Anime అభిమానుల కోసం.</h2></div><p>Anime Telugu Hub అనేది అనిమే గురించి తెలుగులో సమాచారం అందించే అభిమాని వెబ్‌సైట్. కొత్త వివరాల కోసం మళ్లీ రండి!</p></section>
+</main>
+<footer><span>© <span id="year"></span> Anime Telugu Hub</span><span>తెలుగు అనిమే అభిమానుల కోసం ♥</span></footer>
+<script src="anime.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
