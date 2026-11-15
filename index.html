@@ -113,3 +113,76 @@
     </style>
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Post</title>
+<style>
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+  padding: 20px;
+}
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+video {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+button {
+  padding: 12px;
+  background: #087cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Upload MP4 Video</h2>
+
+<input type="file" id="videoFile" accept="video/mp4">
+
+<button onclick="postVideo()">Post Video</button>
+
+<div id="videoPosts"></div>
+</div>
+
+<script>
+function postVideo() {
+  const file = document.getElementById("videoFile").files[0];
+
+  if (!file) {
+    alert("Please select MP4 video");
+    return;
+  }
+
+  if (file.type !== "video/mp4") {
+    alert("MP4 video only");
+    return;
+  }
+
+  const videoURL = URL.createObjectURL(file);
+
+  const video = document.createElement("video");
+  video.src = videoURL;
+  video.controls = true;
+  video.playsInline = true;
+
+  document.getElementById("videoPosts").prepend(video);
+}
+</script>
+
+</body>
+</html>
