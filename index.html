@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="te">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Anime Telugu Hub - అనిమే సమాచారం తెలుగులో">
+  <title>Anime Telugu Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">ア</span><span>ANIME <b>TELUGU HUB</b></span></a>
+    <nav><a href="#home">హోమ్</a><a href="#latest">కొత్త అనిమే</a><a href="#about">మా గురించి</a></nav>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">తెలుగు అనిమే ప్రపంచం</p>
+        <h1>మీకు ఇష్టమైన <span>Anime</span><br>ఇప్పుడు తెలుగులో!</h1>
+        <p class="hero-sub">కొత్త అనిమే వివరాలు, కథలు, పోస్టర్లు — అన్నీ ఒకేచోట.</p>
+        <a class="primary-btn" href="#latest">అనిమే చూడండి <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-kanji">アニメ</div><div class="hero-star">✦</div></div>
+    </section>
+    <section class="catalog" id="latest">
+      <div class="section-heading"><div><p class="eyebrow">మీ తదుపరి ఇష్టమైనది</p><h2>కొత్త అనిమే</h2></div><span id="count" class="count"></span></div>
+      <div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Anime పేరు వెతకండి..." aria-label="Anime వెతకండి"></div>
+      <div id="anime-grid" class="anime-grid"></div>
+      <p id="empty" class="empty" hidden>మీ వెతుకులాటకు సరిపడే Anime కనిపించలేదు.</p>
+    </section>
+    <section class="about" id="about"><div><p class="eyebrow">ANIME • TELUGU • COMMUNITY</p><h2>Anime అభిమానుల కోసం.</h2></div><p>Anime Telugu Hub అనేది అనిమే గురించి తెలుగులో సమాచారం అందించే అభిమాని వెబ్‌సైట్. కొత్త వివరాల కోసం మళ్లీ రండి!</p></section>
+  </main>
+  <footer><span>© <span id="year"></span> Anime Telugu Hub</span><span>తెలుగు అనిమే అభిమానుల కోసం ♥</span></footer>
+  <script src="anime.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
