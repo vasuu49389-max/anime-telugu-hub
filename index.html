@@ -138,50 +138,82 @@ video {
   border-radius: 10px;
 }
 button {
-  padding: 12px;
-  background: #087cff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Upload</title>
 </head>
 <body>
 
-<div class="container">
 <h2>Upload MP4 Video</h2>
 
 <input type="file" id="videoFile" accept="video/mp4">
+<button onclick="uploadVideo()">Upload & Post</button>
 
-<button onclick="postVideo()">Post Video</button>
+<p id="status"></p>
+<div id="videos"></div>
 
-<div id="videoPosts"></div>
-</div>
+<script type="module">
+import { initializeApp } from
+"https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 
-<script>
-function postVideo() {
-  const file = document.getElementById("videoFile").files[0];
+import {
+ getStorage,
+ ref,
+ uploadBytes,
+ getDownloadURL
+} from
+"https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
 
-  if (!file) {
-    alert("Please select MP4 video");
-    return;
-  }
+const firebaseConfig = {
+  apiKey: "AIzaSyBF7oq6xaNPZXRExDXkW2GSeKr32we9IvQ",
+  authDomain: "anime-telugu-hub.firebaseapp.com",
+  projectId: "anime-telugu-hub",
+  storageBucket: "anime-telugu-hub.firebasestorage.app",
+  messagingSenderId: "968011282077",
+  appId: "1:968011282077:web:b11482d5e2a0903d96c674",
+  measurementId: "G-LPG7MDFP9H"
+};
 
-  if (file.type !== "video/mp4") {
-    alert("MP4 video only");
-    return;
-  }
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
 
-  const videoURL = URL.createObjectURL(file);
+window.uploadVideo = async function() {
+ const file = document.getElementById("videoFile").files[0];
 
-  const video = document.createElement("video");
-  video.src = videoURL;
-  video.controls = true;
-  video.playsInline = true;
+ if (!file || file.type !== "video/mp4") {
+   alert("Select MP4 video");
+   return;
+ }
 
-  document.getElementById("videoPosts").prepend(video);
-}
+ try {
+   document.getElementById("status").innerText =
+   "Uploading...";
+
+   const videoRef = ref(storage,
+   "videos/" + Date.now() + "_" + file.name);
+
+   await uploadBytes(videoRef, file);
+
+   const url = await getDownloadURL(videoRef);
+
+   const video = document.createElement("video");
+   video.src = url;
+   video.controls = true;
+   video.width = 320;
+
+   document.getElementById("videos").prepend(video);
+
+   document.getElementById("status").innerText =
+   "Video Posted Successfully!";
+ } catch(error) {
+   document.getElementById("status").innerText =
+   error.message;
+ }
+};
 </script>
 
 </body>
