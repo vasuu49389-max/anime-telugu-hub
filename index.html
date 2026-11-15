@@ -1,4 +1,4 @@
-<!doctype html>
+i<!doctype html>
 <html lang="te">
 <head>
   <meta charset="utf-8">
@@ -113,42 +113,7 @@
     </style>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="te">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Post</title>
-<style>
-body {
-  font-family: Arial;
-  background: #f1f1f1;
-  padding: 20px;
-}
-.container {
-  max-width: 500px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-}
-video {
-  width: 100%;
-  margin-top: 15px;
-  border-radius: 10px;
-}
-button {
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Upload</title>
-</head>
-<body>
-
-<h2>Upload MP4 Video</h2>
+  <h2>Upload MP4 Video</h2>
 
 <input type="file" id="videoFile" accept="video/mp4">
 <button onclick="uploadVideo()">Upload & Post</button>
@@ -166,9 +131,7 @@ import {
  uploadBytes,
  getDownloadURL
 } from
-"https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
-
-const firebaseConfig = {
+"https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";  
   apiKey: "AIzaSyBF7oq6xaNPZXRExDXkW2GSeKr32we9IvQ",
   authDomain: "anime-telugu-hub.firebaseapp.com",
   projectId: "anime-telugu-hub",
@@ -176,9 +139,7 @@ const firebaseConfig = {
   messagingSenderId: "968011282077",
   appId: "1:968011282077:web:b11482d5e2a0903d96c674",
   measurementId: "G-LPG7MDFP9H"
-};
-
-const app = initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
 window.uploadVideo = async function() {
